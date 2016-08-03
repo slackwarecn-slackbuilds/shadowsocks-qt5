@@ -1,0 +1,11 @@
+--- ss-qt5.pri	2016-08-03 11:27:06.990144064 +0800
++++ shadowsocks-qt5-2.7.0/src/ss-qt5.pri	2016-08-03 11:27:22.578144563 +0800
+@@ -68,8 +68,4 @@
+ unix: {
+     CONFIG    += link_pkgconfig
+     PKGCONFIG += libqrencode QtShadowsocks botan-$$BOTAN_VER zbar
+-    !macx: {
+-        PKGCONFIG += gtk+-2.0 appindicator-0.1
+-        DEFINES   += USE_APP_INDICATOR
+-    }
+ }
