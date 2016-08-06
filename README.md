@@ -13,9 +13,10 @@ Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advan
 ## usage
 
 ```
-wget https://github.com/shadowsocks/shadowsocks-qt5/archive/v2.7.0.tar.gz
-git clone https://github.com/slackwarecn/shadowsocks-qt5-slackbuild
-cd shadowsocks-qt5-slackbuild
-ln -s ../v2.7.0.tar.gz .
-sudo sh shadowsocks-qt5.SlackBuild
+git clone https://github.com/slackwarecn-slackbuilds/shadowsocks-qt5.git
+cd shadowsocks-qt5
+source shadowsocks-qt5.info
+wget $DONWLOAD
+shadowsocks-qt5.SlackBuild
 ```
+
