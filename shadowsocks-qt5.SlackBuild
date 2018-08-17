@@ -49,7 +49,7 @@
 # |-----------------------------------------------------------------| #
 
 PRGNAM=shadowsocks-qt5			# replace with name of program
-VERSION=${VERSION:-2.7.0}	# replace with version of program
+VERSION=${VERSION:-3.0.1}	# replace with version of program
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SlackwareCN}		# the "_SBo" is required
 
@@ -93,9 +93,6 @@ cd $TMP
 rm -rf $PRGNAM-$VERSION
 tar xvf $CWD/v$VERSION.tar.gz
 
-# patch appindicator
-patch $PRGNAM-$VERSION/src/ss-qt5.pri <$CWD/appindicator.patch
-
 cd $PRGNAM-$VERSION
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
@@ -120,7 +117,8 @@ find -L . \
 
 
 # Compile the application and install it into the $PKG directory
-qmake-qt5 INSTALL_PREFIX=$PKG/usr
+mkdir build && cd build
+PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/lib/pkgconfig cmake .. -DCMAKE_INSTALL_PREFIX=/usr
 make
 make install
 
