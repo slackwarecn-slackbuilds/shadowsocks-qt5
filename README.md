@@ -8,7 +8,7 @@ Shadowsocks-Qt5 is a native and cross-platform shadowsocks GUI client with advan
 * [Botan](https://slackbuilds.org/repository/14.2/libraries/Botan/)
 * [qrencode](https://slackbuilds.org/repository/14.2/graphics/qrencode/)
 * [zbar](https://slackbuilds.org/repository/14.2/graphics/zbar/)
-* libappindicator ()
+* [libappindicator3](https://slackbuilds.org/repository/14.2/libraries/libappindicator3/)
 
 ## usage
 
